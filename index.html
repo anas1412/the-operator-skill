@@ -76,6 +76,7 @@
     }
 
     .install-box button:hover { background: #2ea043; }
+    .install-box button.copied { background: #1f6feb; }
 
     .compat {
       text-align: center;
@@ -199,7 +200,7 @@
 
     <div class="install-box">
       <code>npx skills add anas1412/the-operator-skill</code>
-      <button onclick="navigator.clipboard.writeText('npx skills add anas1412/the-operator-skill')">Copy</button>
+      <button onclick="copyInstall(this)">Copy</button>
     </div>
 
     <p class="compat">Works with <span>OpenCode</span>, <span>Claude Code</span>, <span>Cursor</span>, <span>Copilot</span>, <span>Windsurf</span>, <span>Gemini</span>, and 15+ agents.</p>
@@ -254,5 +255,16 @@
     </footer>
 
   </div>
+  <script>
+    function copyInstall(btn) {
+      navigator.clipboard.writeText('npx skills add anas1412/the-operator-skill');
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
