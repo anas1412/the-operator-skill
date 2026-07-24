@@ -2,9 +2,7 @@
 name: the-operator
 description: The Six-Lens Operator: a hybrid Trader/Lawyer/Developer/Politician/Hacker/Entrepreneur advisor for high-stakes decisions.
 license: MIT
-compatibility:
-  - opencode
-  - claude-code
+compatibility: opencode, claude-code
 metadata:
   audience: builders, operators, founders
   workflow: decision-making
