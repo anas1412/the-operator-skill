@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Operator — Six-Lens Decision Advisor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .container { max-width: 720px; width: 100%; }
+
+    .hero { text-align: center; margin-bottom: 4rem; }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #f0f6fc;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      color: #8b949e;
+      margin-bottom: 2rem;
+    }
+
+    .hero img {
+      width: 320px;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .install-box {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .install-box code {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 0.95rem;
+      color: #f0f6fc;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .install-box button {
+      background: #238636;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+
+    .install-box button:hover { background: #2ea043; }
+
+    .compat {
+      text-align: center;
+      color: #8b949e;
+      font-size: 0.85rem;
+      margin-bottom: 4rem;
+    }
+
+    .compat span { color: #c9d1d9; font-weight: 500; }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #f0f6fc;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .lenses {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 4rem;
+    }
+
+    .lens {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+
+    .lens h3 {
+      font-size: 1rem;
+      color: #f0f6fc;
+      margin-bottom: 0.35rem;
+    }
+
+    .lens p {
+      font-size: 0.85rem;
+      color: #8b949e;
+      line-height: 1.5;
+    }
+
+    .example {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .example .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8b949e;
+      margin-bottom: 0.75rem;
+    }
+
+    .example .question {
+      font-style: italic;
+      color: #c9d1d9;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .example .answer {
+      border-left: 3px solid #30363d;
+      padding-left: 1rem;
+      color: #8b949e;
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .example .answer strong { color: #f0f6fc; }
+
+    .cta {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      background: #238636;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.15s;
+    }
+
+    .cta a:hover { background: #2ea043; }
+
+    footer {
+      text-align: center;
+      color: #484f58;
+      font-size: 0.8rem;
+      padding-top: 2rem;
+      border-top: 1px solid #21262d;
+    }
+
+    footer a { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .lenses { grid-template-columns: 1fr; }
+      .install-box { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="hero">
+      <h1>The Operator</h1>
+      <p class="tagline">Six-Lens Decision Advisor for AI Coding Agents</p>
+      <img src="the-operator.png" alt="The Operator — Six Lenses">
+    </div>
+
+    <div class="install-box">
+      <code>npx skills add anas1412/the-operator-skill</code>
+      <button onclick="navigator.clipboard.writeText('npx skills add anas1412/the-operator-skill')">Copy</button>
+    </div>
+
+    <p class="compat">Works with <span>OpenCode</span>, <span>Claude Code</span>, <span>Cursor</span>, <span>Copilot</span>, <span>Windsurf</span>, <span>Gemini</span>, and 15+ agents.</p>
+
+    <h2>The Six Lenses</h2>
+    <div class="lenses">
+      <div class="lens">
+        <h3>Trader</h3>
+        <p>What is the risk, and is the timing right?</p>
+      </div>
+      <div class="lens">
+        <h3>Lawyer</h3>
+        <p>What happens when good faith is not enough?</p>
+      </div>
+      <div class="lens">
+        <h3>Developer</h3>
+        <p>What is the simplest thing that actually works?</p>
+      </div>
+      <div class="lens">
+        <h3>Politician</h3>
+        <p>Who needs to say yes, and what is in it for them?</p>
+      </div>
+      <div class="lens">
+        <h3>Hacker</h3>
+        <p>How would someone break this?</p>
+      </div>
+      <div class="lens">
+        <h3>Entrepreneur</h3>
+        <p>What is the smallest test that proves or disproves this?</p>
+      </div>
+    </div>
+
+    <h2>How It Works</h2>
+    <div class="example">
+      <div class="label">You ask</div>
+      <div class="question">"I have 8 months of runway. My side project has 200 users and $400 MRR. My job pays $180k. Should I quit?"</div>
+      <div class="answer">
+        <strong>Bottom line:</strong> Not yet. Get to $2k MRR or 3 months of consistent 20% growth first.<br><br>
+        <strong>Trader:</strong> 8 months sounds like a lot, but 3 will be spent building the wrong thing if you have not validated what people pay for.<br>
+        <strong>Entrepreneur:</strong> $400 MRR from 200 users is $2 ARPU. That is a hobby metric. Find out what the top 10 users would pay for.<br>
+        <strong>Developer:</strong> The simplest test is not "quit and build." It is "spend 4 weekends selling manually and see if conversion holds."<br><br>
+        <strong>Next step:</strong> Spend 30 days on sales and onboarding only. If MRR hits $1,500 without new features, quit.
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://github.com/anas1412/the-operator-skill">View on GitHub</a>
+    </div>
+
+    <footer>
+      MIT License &middot; <a href="https://github.com/anas1412/the-operator-skill">anas1412/the-operator-skill</a>
+    </footer>
+
+  </div>
+</body>
+</html>
