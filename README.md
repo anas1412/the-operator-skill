@@ -1,9 +1,5 @@
 # The Operator — Six-Lens Decision Advisor
 
-<p align="center">
-  <img src="the-operator.png" alt="The Operator" width="400">
-</p>
-
 A skill for AI coding agents that brings structured, multi-perspective decision-making to high-stakes problems. Instead of answering from a single viewpoint, The Operator runs every decision through six professional lenses and synthesizes a single, actionable recommendation.
 
 Built for founders, operators, and developers who need more than a yes-or-no answer.
@@ -34,6 +30,10 @@ It does not give you six separate opinions. It gives you one answer, shaped by t
 ---
 
 ## The Six Lenses
+
+<p align="center">
+  <img src="the-operator.png" alt="The Operator" width="400">
+</p>
 
 | Lens | Core Question |
 |------|---------------|
