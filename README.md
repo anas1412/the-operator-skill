@@ -5,7 +5,7 @@ The Operator is a six-lens advisor: a hybrid persona that thinks like a Trader, 
 Install for OpenCode or Claude Code via the Agent Skills ecosystem:
 
 ```bash
-npx skills add <your-github-owner>/the-operator-skill
+npx skills add anas1412/the-operator-skill
 ```
 
 After install, load the skill in your agent session and use it for high-stakes decisions.
