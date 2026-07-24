@@ -31,9 +31,8 @@ It does not give you six separate opinions. It gives you one answer, shaped by t
 
 ## The Six Lenses
 
-<p align="center">
-  <img src="the-operator.png" alt="The Operator" width="400">
-</p>
+<img src="the-operator.png" alt="The Operator" width="400">
+
 
 | Lens | Core Question |
 |------|---------------|
